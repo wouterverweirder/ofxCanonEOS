@@ -5,9 +5,9 @@ OSX Only for now.
 
 ## usage (OSX)
 
-1. Register as canon developer & download canon sdk
+1. [Register as canon developer & download canon sdk](https://www.didp.canon-europa.com/)
  
-2. EDSDK.framework in canon sdk download doesn't seem to be working. Download the latest EOS Utility from http://usa.canon.com/cusa/support/consumer/eos_slr_camera_systems/eos_digital_slr_cameras/ for you camera. You might not have a previous EOS Utility install or a CD. You can force the installer to install EOS utility:
+2. EDSDK.framework in canon sdk download doesn't seem to be working. [Download the latest EOS Utility for you camera](http://usa.canon.com/cusa/support/consumer/eos_slr_camera_systems/eos_digital_slr_cameras/). You might not have a previous EOS Utility install or a CD. You can force the installer to install EOS utility:
 	1. Copy the updater app from the dmg to your desktop
 	2. Right click and choose Show Package Contents…
 	3. Delete the file Contents/Resources/Info.datx
