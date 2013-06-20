@@ -1,0 +1,1 @@
+Copy the EDSDK folder from the Canon SDK into this directory

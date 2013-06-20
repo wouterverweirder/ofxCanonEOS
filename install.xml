@@ -1,0 +1,56 @@
+<install>
+    <name>ofxCanonEOS</name>
+	<version>0.01</version>
+	<author>wouter verweirder</author>
+	<url>https://github.com/wouterverweirder/ofxCanonEOS</url>
+
+	<add>
+
+		<!-- 	=====================================================================	-->
+		<!--	========================== add per project using this addon =========	-->
+		<!-- 	=====================================================================	-->
+
+		<src>
+			<folder name="addons/ofxCanonEOS/src">
+				<file>../../../addons/ofxCanonEOS/src/ActionEvent.h</file>
+				<file>../../../addons/ofxCanonEOS/src/ActionListener.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CameraController.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CameraEvent.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CameraEventListener.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CameraModel.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CameraModelLegacy.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CanonSDKWrapper.h</file>
+				<file>../../../addons/ofxCanonEOS/src/CloseSessionCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/Command.h</file>
+				<file>../../../addons/ofxCanonEOS/src/DoEvfAFCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/DownloadCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/DownloadEvfCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/DriveLensCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/EndEvfCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/GetPropertyCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/GetPropertyDescCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/NotifyCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/Observer.h</file>
+				<file>../../../addons/ofxCanonEOS/src/OpenSessionCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/PressShutterButtonCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/Processor.h</file>
+				<file>../../../addons/ofxCanonEOS/src/SaveSettingCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/SetCapacityCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/SetPropertyCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/StartEvfCommand.h</file>
+				<file>../../../addons/ofxCanonEOS/src/TakePictureCommand.h</file>
+			</folder>
+		</src>
+
+		<include>
+			<path>../../../addons/ofxCanonEOS/src</path>
+			<path>../../../addons/ofxCanonEOS/libs/EDSDK/Header</path>
+		</include>
+		
+		<link>
+		</link>
+		
+	</add>
+	
+	
+</install>

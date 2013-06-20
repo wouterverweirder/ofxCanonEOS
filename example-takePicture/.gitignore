@@ -1,0 +1,3 @@
+bin/*.app
+bin/data/*.jpg
+xcuserdata
