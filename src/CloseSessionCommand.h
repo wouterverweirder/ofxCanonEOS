@@ -40,7 +40,7 @@ public:
 		if(err != EDS_ERR_OK)
 		{
 			CameraEvent e("error", &err);
-			_model->notifyObservers(&e);
+			//_model->notifyObservers(&e);
 		}
 
 		return true;

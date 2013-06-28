@@ -50,25 +50,31 @@ public:
 	
 	void enqueue(Command* command)
 	{
-		lock();
-		_queue.push_back(command);
-		_condition.signal();
-		unlock();
+        try {
+            lock();
+            _queue.push_back(command);
+            _condition.signal();
+            unlock();
+        } catch (Poco::SystemException &e) {
+            cout << "enqueue exception" << endl;
+        }
 	}
     
     
 	void clear()
 	{
-		lock();
-		std::deque<Command*>::iterator it = _queue.begin();
-		while (it != _queue.end())
-		{
-			delete (*it);
-			++it;
-		}
-		_queue.clear();
-        
-		unlock();
+        try {
+            lock();
+            std::deque<Command*>::iterator it = _queue.begin();
+            while (it != _queue.end()){
+                delete (*it);
+                ++it;
+            }
+            _queue.clear();
+            unlock();
+        } catch (Poco::SystemException &e) {
+            cout << "clear exception" << endl;
+        }
 	}
     
     
@@ -107,6 +113,8 @@ public:
 		// Clear que
 		clear();
         
+        cout << "execute close command" << endl;
+        
 		// Command of end
 		if(_closeCommand != NULL)
 		{
@@ -116,6 +124,7 @@ public:
 		}
         
 		//CoUninitialize();
+        cout << "Processor finished" << endl;
         
 	}
     
@@ -128,28 +137,21 @@ protected:
 	{
         
 		Command* command = NULL;
-        
-		lock();
-        
-		if (isThreadRunning() && !_queue.empty())
-		{
-			command = _queue.front();
-			_queue.pop_front();
-		}
-        
-		unlock();
+        try {
+            lock();
+            
+            if (isThreadRunning() && !_queue.empty())
+            {
+                command = _queue.front();
+                _queue.pop_front();
+            }
+            
+            unlock();
+        } catch (Poco::SystemException &e) {
+            cout << "take exception" << endl;
+        }
         
 		return command;
-	}
-    
-    
-	bool isEmpty()
-	{
-		lock();
-		bool ret = _queue.empty();
-		unlock();
-		
-		return ret;
 	}
     
 };
