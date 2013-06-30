@@ -40,7 +40,6 @@ public:
             _isSDKLoaded = false;
             
             _err = EdsInitializeSDK();
-            cout << "EdsInitializeSDK " << _err << endl;
             if(_err == EDS_ERR_OK) {
                 _isSDKLoaded = true;
                 _err = EdsGetCameraList(&_cameraList);
@@ -134,7 +133,6 @@ public:
     
     void update(Observable* from, CameraEvent *e){
         std::string event = e->getEvent();
-        cout << event << endl;
         if(event == "DownloadComplete") {
             string* arg = (string *) e->getArg();
             _mutex.lock();

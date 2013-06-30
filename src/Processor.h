@@ -56,7 +56,7 @@ public:
             _condition.signal();
             unlock();
         } catch (Poco::SystemException &e) {
-            cout << "enqueue exception" << endl;
+            //cout << "enqueue exception" << endl;
         }
 	}
     
@@ -73,7 +73,7 @@ public:
             _queue.clear();
             unlock();
         } catch (Poco::SystemException &e) {
-            cout << "clear exception" << endl;
+            //cout << "clear exception" << endl;
         }
 	}
     
@@ -113,8 +113,6 @@ public:
 		// Clear que
 		clear();
         
-        cout << "execute close command" << endl;
-        
 		// Command of end
 		if(_closeCommand != NULL)
 		{
@@ -124,7 +122,6 @@ public:
 		}
         
 		//CoUninitialize();
-        cout << "Processor finished" << endl;
         
 	}
     
@@ -148,7 +145,7 @@ protected:
             
             unlock();
         } catch (Poco::SystemException &e) {
-            cout << "take exception" << endl;
+            //cout << "take exception" << endl;
         }
         
 		return command;

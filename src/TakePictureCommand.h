@@ -45,8 +45,6 @@ public:
 		
 		//Taking a picture
 		err = EdsSendCommand(_model->getCameraObject(), kEdsCameraCommand_TakePicture, 0);
-        
-        std::cout << "Controller Took Picture" << std::endl;
 
 		//It releases it when locked
 		if(locked)
